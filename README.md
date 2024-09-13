@@ -1,7 +1,7 @@
 
-# MagicStrings: Automated Function Renaming Tool for Ghidra
+# Ghidrautorename: Automated Function Renaming Tool for Ghidra
 
-MagicStrings is a Python script that automates the process of renaming functions in Ghidra by inferring function names from debugging strings found within binary executables. This tool aims to enhance the readability and analysis of binaries by assigning more meaningful names to functions based on strings they reference.
+Ghidrautorename is a Python script that automates the process of renaming functions in Ghidra by inferring function names from debugging strings found within binary executables. This tool aims to enhance the readability and analysis of binaries by assigning more meaningful names to functions based on strings they reference.
 
 ## Table of Contents
 
@@ -74,13 +74,13 @@ Set the `GHIDRA_INSTALL_DIR` environment variable to point to the directory wher
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/magicstrings.git
-   cd magicstrings
+   git clone https://github.com/yourusername/Ghidrautorename.git
+   cd Ghidrautorename
    ```
 
 2. **Run the Script**:
    ```bash
-   python magicstrings.py /path/to/your/binary
+   python Ghidrautorename.py /path/to/your/binary
    ```
 
    Replace `/path/to/your/binary` with the actual path to the binary file you want to analyze.
