@@ -1,7 +1,7 @@
 
-# Ghidrautorename: Automated Function Renaming Tool for Ghidra
+# MagicStrings: Automated Function Renaming Tool for Ghidra
 
-Ghidrautorename is a Python script that automates the process of renaming functions in Ghidra by inferring function names from debugging strings found within binary executables. This tool aims to enhance the readability and analysis of binaries by assigning more meaningful names to functions based on strings they reference.
+MagicStrings is a Python script that automates the process of renaming functions in Ghidra by inferring function names from debugging strings found within binary executables. This tool aims to enhance the readability and analysis of binaries by assigning more meaningful names to functions based on strings they reference.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ Ghidrautorename is a Python script that automates the process of renaming functi
 - Calculates a confidence score for potential function names.
 - Renames functions in Ghidra based on inferred names.
 - Supports multiple programming languages for source file detection.
-- Natural Language Processing (NLP) integration using NLTK.
+- Optional Natural Language Processing (NLP) integration using NLTK.
 
 ## How It Works
 
@@ -29,7 +29,7 @@ Ghidrautorename is a Python script that automates the process of renaming functi
 
 2. **Name Detection**: It uses regular expressions to identify potential function names within these strings.
 
-3. **NLTK Processing** : If NLTK is available, the script tokenizes and tags words to improve confidence in potential function names.
+3. **NLTK Processing** (Optional): If NLTK is available, the script tokenizes and tags words to improve confidence in potential function names.
 
 4. **Reference Analysis**: For each potential function name, the script finds all references to the string in the code to determine which functions might be associated with it.
 
@@ -49,47 +49,48 @@ Ghidrautorename is a Python script that automates the process of renaming functi
 - **Ghidra**: Download and install Ghidra from the [official website](https://ghidra-sre.org/).
 - **Python 3**: Ensure you have Python 3 installed.
 - **Pyhidra**: Install Pyhidra using pip:
-  \`\`\`bash
+  ```bash
   pip install pyhidra
-  \`\`\`
+  ```
 - **NLTK** (Optional): For enhanced NLP capabilities, install NLTK:
-  \`\`\`bash
+  ```bash
   pip install nltk
-  \`\`\`
+  ```
 
 ### Environment Variable
 
-Set the \`GHIDRA_INSTALL_DIR\` environment variable to point to the directory where Ghidra is installed.
+Set the `GHIDRA_INSTALL_DIR` environment variable to point to the directory where Ghidra is installed.
 
 - **Linux/MacOS**:
-  \`\`\`bash
+  ```bash
   export GHIDRA_INSTALL_DIR=/path/to/ghidra
-  \`\`\`
+  ```
 - **Windows**:
-  \`\`\`cmd
+  ```cmd
   set GHIDRA_INSTALL_DIR=C:\path\to\ghidra
-  \`\`\`
+  ```
 
 ## Usage
 
 1. **Clone the Repository**:
-   \`\`\`bash
-   git clone https://github.com/yourusername/Ghidrautorename.git
-   cd Ghidrautorename
-   \`\`\`
+   ```bash
+   git clone https://github.com/yourusername/magicstrings.git
+   cd magicstrings
+   ```
 
 2. **Run the Script**:
-   \`\`\`bash
-   python Ghidrautorename.py /path/to/your/binary
-   \`\`\`
+   ```bash
+   python magicstrings.py /path/to/your/binary
+   ```
 
-   Replace \`/path/to/your/binary\` with the actual path to the binary file you want to analyze.
+   Replace `/path/to/your/binary` with the actual path to the binary file you want to analyze.
 
 ## Example Output
 
-\`\`\`plaintext
+```bash
 [+] NLTK successfully imported
 Total strings extracted: 7
+
 
 [+] Successfully renamed function at 0x08048a86 to 'Exemple'
 
@@ -102,7 +103,7 @@ Function at 0x08048a86 renamed to Exemple
 ==================================================
 Renaming Process Complete
 ==================================================
-\`\`\`
+```
 
 ## Contributing
 
