@@ -1,3 +1,8 @@
+<div align="center">
+   
+![Ghidrautorename](Ghidra.jpg)
+
+</div>
 
 # Ghidrautorename: Automated Function Renaming Tool for Ghidra
 
